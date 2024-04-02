@@ -2,7 +2,7 @@ package test;
 
 import java.util.Vector;
 
-public class MoneyBag {
+public class MoneyBag implements IMoney {
 	private Vector<Money> fMonies = new Vector<Money>();
 	MoneyBag(Money m1, Money m2) {
 		appendMoney(m1); 
@@ -11,6 +11,9 @@ public class MoneyBag {
 	MoneyBag(Money bag[]) {
 		for (int i = 0; i < bag.length; i++)
 			appendMoney(bag[i]);
+		}
+	public IMoney add(IMoney m) {
+		return m.addMoneyBag(this);
 		}
 	private void appendMoney(Money m) {
 		if (fMonies.isEmpty()) {
@@ -37,4 +40,14 @@ public class MoneyBag {
         MoneyBag other = (MoneyBag) obj;
         return fMonies.equals(other.fMonies);
     }
+	@Override
+	public IMoney addMoney(Money money) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public IMoney addMoneyBag(MoneyBag moneyBag) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
