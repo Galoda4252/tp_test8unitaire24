@@ -30,7 +30,7 @@ public class Money implements IMoney {
 	}
 
     public boolean equals(Object obj) {
-        if (this == obj) {
+        if (this == obj) { 
             return true;
         }
         if (obj == null || getClass() != obj.getClass()) {
@@ -40,14 +40,5 @@ public class Money implements IMoney {
         return fAmount == other.fAmount && fCurrency.equals(other.fCurrency);
     }
 
-    @Override
-	public IMoney addMoney(Money money) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public IMoney addMoneyBag(MoneyBag moneyBag) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    
 }

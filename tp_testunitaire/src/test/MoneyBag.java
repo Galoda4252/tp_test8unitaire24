@@ -12,9 +12,7 @@ public class MoneyBag implements IMoney {
 		for (int i = 0; i < bag.length; i++)
 			appendMoney(bag[i]);
 		}
-	public IMoney add(IMoney m) {
-		return m.addMoneyBag(this);
-		}
+	
 	private void appendMoney(Money m) {
 		if (fMonies.isEmpty()) {
 			fMonies.add(m);
@@ -41,13 +39,19 @@ public class MoneyBag implements IMoney {
         return fMonies.equals(other.fMonies);
     }
 	@Override
-	public IMoney addMoney(Money money) {
+	public int amount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public String currency() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
-	public IMoney addMoneyBag(MoneyBag moneyBag) {
+	public IMoney add(IMoney m) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 }
